@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refund & Cancellation Policy — Salad etc.</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,300;1,9..144,500&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --forest: #0d2818; --deep: #1a4731; --rich: #2d6a4f;
+    --mid: #52b788; --sage: #74c69d; --mint: #95d5b2;
+    --pale: #d8f3dc; --cream: #f4fef5; --white: #ffffff;
+    --text: #0f2419; --muted: #3d6b53;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Nunito', sans-serif; background: var(--cream); color: var(--text); }
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    padding: 1.2rem 3rem;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(13,40,24,0.95); backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(82,183,136,0.15);
+  }
+  .logo { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 500; color: var(--mint); letter-spacing: 0.02em; text-decoration: none; }
+  .logo span { color: var(--sage); font-style: italic; }
+  .back-link {
+    color: var(--pale); text-decoration: none; font-size: 0.85rem;
+    font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+    border: 1.5px solid rgba(82,183,136,0.4); padding: 0.5rem 1.2rem;
+    border-radius: 999px; transition: border-color 0.3s, color 0.3s;
+  }
+  .back-link:hover { border-color: var(--mint); color: var(--mint); }
+
+  .policy-hero {
+    background: linear-gradient(160deg, var(--forest) 0%, #153320 50%, #1c4a30 100%);
+    padding: 4rem 3rem 3.5rem; text-align: center;
+  }
+  .section-tag {
+    display: inline-block; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--sage); background: rgba(82,183,136,0.15);
+    border: 1px solid rgba(82,183,136,0.3); padding: 0.35rem 1rem;
+    border-radius: 999px; margin-bottom: 1.2rem;
+  }
+  .policy-hero h1 {
+    font-family: 'Fraunces', serif; font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 700; color: var(--white); line-height: 1.2;
+  }
+  .policy-hero h1 em { font-style: italic; color: var(--sage); }
+  .policy-hero p { color: rgba(216,243,220,0.75); margin-top: 0.8rem; font-size: 1rem; }
+
+  .policy-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+  .intro-box {
+    background: var(--white); border: 1px solid var(--pale);
+    border-radius: 16px; padding: 1.6rem 1.8rem; margin-bottom: 2.5rem;
+    color: var(--muted); line-height: 1.8; font-size: 0.98rem;
+  }
+
+  .policy-item { margin-bottom: 2.2rem; }
+  .policy-item-header { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 0.8rem; }
+  .policy-num {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--rich); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Fraunces', serif; font-weight: 700; font-size: 1rem;
+    flex-shrink: 0;
+  }
+  .policy-item h2 {
+    font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 700;
+    color: var(--forest);
+  }
+  .policy-body {
+    color: var(--muted); line-height: 1.85; font-size: 0.98rem;
+    padding-left: 3.1rem;
+  }
+  .policy-body p { margin-bottom: 0.6rem; }
+  .policy-body ul { list-style: none; margin: 0.4rem 0; }
+  .policy-body li {
+    position: relative; padding-left: 1.3rem; margin-bottom: 0.5rem;
+  }
+  .policy-body li::before {
+    content: ''; position: absolute; left: 0; top: 0.55rem;
+    width: 6px; height: 6px; border-radius: 50%; background: var(--mid);
+  }
+  .policy-body .sub-head {
+    font-weight: 700; color: var(--rich); margin-top: 0.8rem; display: block;
+  }
+  .divider { height: 1px; background: var(--pale); margin: 0 0 2.2rem; }
+
+  .contact-card {
+    background: var(--forest); border-radius: 20px;
+    padding: 2.2rem 2rem; text-align: center; margin-top: 1rem;
+  }
+  .contact-card h2 {
+    font-family: 'Fraunces', serif; color: var(--white); font-size: 1.4rem;
+    margin-bottom: 0.6rem;
+  }
+  .contact-card p { color: var(--mint); font-size: 0.95rem; margin-bottom: 1.2rem; }
+  .contact-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .contact-pill {
+    background: rgba(82,183,136,0.15); border: 1.5px solid rgba(82,183,136,0.4);
+    color: var(--pale); padding: 0.6rem 1.3rem; border-radius: 999px;
+    font-size: 0.88rem; font-weight: 600; text-decoration: none;
+    transition: background 0.3s;
+  }
+  .contact-pill:hover { background: rgba(82,183,136,0.28); }
+
+  footer {
+    background: var(--forest); padding: 2.5rem 3rem;
+    text-align: center; border-top: 1px solid rgba(82,183,136,0.15);
+    color: rgba(149,213,178,0.5); font-size: 0.8rem;
+  }
+
+  @media (max-width: 700px) {
+    nav { padding: 1rem 1.4rem; }
+    .policy-hero { padding: 3rem 1.4rem 2.5rem; }
+    .policy-wrap { padding: 3rem 1.2rem 4rem; }
+    .policy-body { padding-left: 0; margin-top: 0.6rem; }
+    .policy-item-header { align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="salad-etc.html" class="logo">Salad <span>etc.</span></a>
+  <a href="salad-etc.html" class="back-link">← Back to Home</a>
+</nav>
+
+<div class="policy-hero">
+  <div class="section-tag">Policies</div>
+  <h1>Refund &amp; <em>Cancellation</em> Policy</h1>
+  <p>Please read this carefully before placing an order or subscription.</p>
+</div>
+
+<div class="policy-wrap">
+
+  <div class="intro-box">
+    At Salad etc. we strive to deliver fresh, hygienic, and high-quality food products. Due to the perishable nature of our products, the following refund and cancellation terms apply.
+  </div>
+
+  <div class="policy-item">
+    <div class="policy-item-header">
+      <div class="policy-num">1</div>
+      <h2>No Return Policy</h2>
+    </div>
+    <div class="policy-body">
+      <p>All food products once delivered are non-returnable due to hygiene and safety reasons.</p>
+    </div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="policy-item">
+    <div class="policy-item-header">
+      <div class="policy-num">2</div>
+      <h2>Order Cancellation</h2>
+    </div>
+    <div class="policy-body">
+      <ul>
+        <li>Orders once confirmed may not be cancelled if preparation has already started.</li>
+        <li>Cancellation requests must be raised before the scheduled preparation time.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="policy-item">
+    <div class="policy-item-header">
+      <div class="policy-num">3</div>
+      <h2>Subscription Cancellation</h2>
+    </div>
+    <div class="policy-body">
+      <span class="sub-head">Before First Delivery</span>
+      <p>Customers may cancel their subscription before the first scheduled delivery and receive a full refund. Refunds will be processed within 5–7 working days to the original payment method.</p>
+
+      <span class="sub-head">After Subscription Has Started</span>
+      <p>If a subscription is cancelled after deliveries have begun:</p>
+      <ul>
+        <li>Charges will be calculated based on deliveries already used.</li>
+        <li>Standard rate applied: ₹150 per bowl/delivery.</li>
+        <li>The remaining balance will be refunded.</li>
+      </ul>
+      <p>Refunds may be provided:</p>
+      <ul>
+        <li>To the original payment source</li>
+      </ul>
+    </div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="policy-item">
+    <div class="policy-item-header">
+      <div class="policy-num">4</div>
+      <h2>Subscription Pause / Reschedule</h2>
+    </div>
+    <div class="policy-body">
+      <p>Customers may request to pause or reschedule deliveries:</p>
+      <ul>
+        <li>Inform at least 24 hours in advance.</li>
+        <li>Requests can be made via email or phone.</li>
+        <li>Missed deliveries without prior notice may not be compensated.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="policy-item">
+    <div class="policy-item-header">
+      <div class="policy-num">5</div>
+      <h2>Refund Eligibility</h2>
+    </div>
+    <div class="policy-body">
+      <p>Refunds may be considered only in the following cases:</p>
+      <ul>
+        <li>Order not delivered</li>
+        <li>Wrong item delivered</li>
+        <li>Product damaged during delivery</li>
+        <li>Quality issue verified by our team</li>
+      </ul>
+      <p>Salad etc. reserves the right to verify claims before processing refunds.</p>
+    </div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="policy-item">
+    <div class="policy-item-header">
+      <div class="policy-num">6</div>
+      <h2>Non-Refundable Situations</h2>
+    </div>
+    <div class="policy-body">
+      <p>Refunds will not be provided for:</p>
+      <ul>
+        <li>Change of taste preference</li>
+        <li>Delivery delays caused by external factors</li>
+        <li>Incorrect address provided by customer</li>
+        <li>Failure to receive order at delivery time</li>
+      </ul>
+    </div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="policy-item">
+    <div class="policy-item-header">
+      <div class="policy-num">7</div>
+      <h2>Processing Time</h2>
+    </div>
+    <div class="policy-body">
+      <p>Approved refunds will be processed within 5–7 working days. Bank/payment gateway timelines may vary.</p>
+    </div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="contact-card">
+    <h2>Contact Support</h2>
+    <p>For cancellation, refund, or subscription queries — Salad etc.</p>
+    <div class="contact-links">
+      <a href="https://wa.me/918459471132" class="contact-pill">📱 WhatsApp: 8459471132</a>
+      <a href="https://instagram.com/Salaad_etc" class="contact-pill">📷 Instagram DM: Salaad_etc</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Salad etc. Bhilai-Durg, Chhattisgarh. All rights reserved.
+</footer>
+
+</body>
+</html>
